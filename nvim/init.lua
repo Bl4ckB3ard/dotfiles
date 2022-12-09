@@ -1,0 +1,5 @@
+require("Bl4ckb3ard.themes")
+require("Bl4ckb3ard.mappings")
+require("Bl4ckb3ard.packer_config")
+require("Bl4ckb3ard.settings")
+require("Bl4ckb3ard.lsp-setup")
