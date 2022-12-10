@@ -1,0 +1,80 @@
+[global_config]
+  dbus = False
+  enabled_plugins = CustomCommandsMenu, LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
+  putty_paste_style_source_clipboard = True
+[keybindings]
+  new_tab = <Super>n
+  cycle_next = None
+  cycle_prev = None
+  go_next = None
+  go_prev = None
+  rotate_cw = None
+  rotate_ccw = None
+  split_horiz = <Super>Up
+  split_vert = <Super>Right
+  close_term = <Super>k
+  toggle_scrollbar = None
+  search = None
+  close_window = None
+  resize_up = <Alt><Super>Up
+  resize_down = <Alt><Super>Down
+  resize_left = <Alt><Super>Left
+  resize_right = <Alt><Super>Right
+  move_tab_right = None
+  move_tab_left = None
+  toggle_zoom = None
+  scaled_zoom = <Primary><Shift>z
+  next_tab = <Super>Tab
+  prev_tab = None
+  reset_clear = None
+  hide_window = None
+  group_all = None
+  ungroup_all = None
+  group_tab = None
+  ungroup_tab = None
+  new_window = None
+  new_terminator = <Primary><Super>n
+  broadcast_off = None
+  broadcast_group = None
+  broadcast_all = None
+  insert_number = None
+  insert_padded = None
+  edit_window_title = None
+  edit_tab_title = None
+  edit_terminal_title = None
+  layout_launcher = None
+  help = None
+[profiles]
+  [[default]]
+    allow_bold = False
+    background_darkness = 0.49
+    cursor_color = "#aaaaaa"
+    foreground_color = "#ffffff"
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+    copy_on_selection = True
+  [[red]]
+    background_color = "#ef2929"
+    cursor_color = "#aaaaaa"
+    foreground_color = "#eeeeec"
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+  [[transparent]]
+    background_darkness = 0.13
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    foreground_color = "#ffffff"
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+  [[transparent BLACK]]
+    background_color = "#ffffff"
+    background_darkness = 0.1
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    foreground_color = "#000000"
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
