@@ -47,10 +47,18 @@ snippet = {
     ['<C-e>'] = cmp.mapping(cmp.mapping.abort(), {"i", "c"}),
     ['<C-Space>'] = cmp.mapping(cmp.mapping.select_next_item(), {"i"}),
 	-- can't decide on <leader><tab>
-	-- ['<leader><tab>'] = cmp.mapping(cmp.mapping.select_next_item(), {"i"}),
+	['<leader><tab>'] = cmp.mapping(cmp.mapping.select_next_item(), {"i"}),
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
+	-- set tab to cylcle auto complete options
+	['<Tab>'] = function(fallback)
+		if cmp.visible() then
+			cmp.select_next_item()
+		else
+			fallback()
+		end
+	end
   },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
