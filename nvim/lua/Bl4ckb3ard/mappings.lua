@@ -1,4 +1,5 @@
 local function map(m, k, v)
+
 	vim.keymap.set(m, k, v, {silent = true})
 end
 
@@ -35,13 +36,11 @@ map("n", "<A-k>", "<CMD>resize -1<CR>")
 -- <bar> means |(pipe) so command is ":split | resize 8 | term <CR>i"
 map("n", "<leader>term", "<CMD>split <bar> res 8 <bar> term<CR>i")
 
-
--- buffertab
-map("n", "\\<tab>", "<CMD>BufferLineCycleNext<CR>")
-map("n", "<leader>qh", "<CMD>BufferLineCloseLeft<CR>")
-map("n", "<leader>ql", "<CMD>BufferLineCloseRight<CR>")
-map("n", "<leader>qq", "<C-w>q")
-
+map("n", "L", "<CMD>bnext<CR>")
+map("n", "H", "<CMD>bprev<CR>")
 
 --telescope maps
 map("n", "<leader>ff", "<CMD>Telescope find_files<CR>")
+
+-- copy whole file
+map("n", "<c-a>", "ggVGy<c-o>")

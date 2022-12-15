@@ -11,24 +11,21 @@ return require("packer").startup(function()
 	use "nvim-lua/plenary.nvim"
 	-- devcons
 	use "kyazdani42/nvim-web-devicons"
+	use "nvim-treesitter/nvim-treesitter"
 
 
         ----------------------------------------------
         -- Themes, Status Line, Buffer Tabs, Syntax --
         ----------------------------------------------
 
-	-- gruvbox
-	use {"luisiacc/gruvbox-baby", branch = "main"}
+	--themes
+	use "RRethy/nvim-base16"
 
 	-- lualine
 	use {"nvim-lualine/lualine.nvim", config = function()
 			require("Bl4ckb3ard.plugins.lualine")
 		end}
 
-	-- bufferline
-	use {"akinsho/bufferline.nvim", requre,tag = "v3.*", requires = "kyazdani42/nvim-web-devicons", config = function()
-			require("bufferline").setup()
-		end}
 	--syntax highliting
 	use "sheerun/vim-polyglot"
 

@@ -1,6 +1,6 @@
 require("lualine").setup {
 	options = {
-		theme = 'gruvbox-baby',
+		theme = "auto",
         globalstatus = true,
 		component_separators = "",
     	section_separators = ""

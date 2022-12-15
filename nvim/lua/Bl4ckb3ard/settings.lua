@@ -15,6 +15,7 @@ set.shiftwidth = 4
 set.relativenumber =  true
 set.termguicolors = true
 set.scrolloff = 7
+set.syntax = "on"
 
 -- no highlight search / search settings
 set.smartcase = true
