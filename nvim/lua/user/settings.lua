@@ -1,6 +1,6 @@
 local set = vim.opt
 
-set.clipboard = "unnamedplus"
+-- set.clipboard = "unnamedplus"
 
 set.swapfile = false
 set.backup = false
@@ -24,3 +24,4 @@ set.splitbelow = true
 set.splitright = true
 
 vim.g.mapleader = " "
+
