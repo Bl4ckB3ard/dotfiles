@@ -1,6 +1,5 @@
 local set = vim.opt
 
--- set.clipboard = "unnamedplus"
 
 set.swapfile = false
 set.backup = false

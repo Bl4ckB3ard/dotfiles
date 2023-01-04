@@ -36,15 +36,18 @@ vim.keymap.set("n", "<A-k>", "<CMD>resize -1<CR>")
 vim.keymap.set("n", "<leader>cs1", "<CMD>lua ColorMyPencils(1)<CR>")
 vim.keymap.set("n", "<leader>cs2", "<CMD>lua ColorMyPencils(2)<CR>")
 vim.keymap.set("n", "<leader>cs3", "<CMD>lua ColorMyPencils(3)<CR>")
+vim.keymap.set("n", "<leader>cs4", "<CMD>lua ColorMyPencils(4)<CR>")
 
 -- clipboard maps
-vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set({"n", "v"}, "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
-vim.keymap.set("v", "<leader>y", "\"+y")
 
-vim.keymap.set("n", "<leader>p", "\"+p")
-vim.keymap.set("v", "<leader>p", "\"+p")
+vim.keymap.set({"n", "v"}, "<leader>p", "\"+p")
 
 -- fix <c-d> and <c-u>
 vim.keymap.set("n", "<c-d>", "<c-d>zz")
 vim.keymap.set("n", "<c-u>", "<c-u>zz")
+
+-- run python file
+vim.keymap.set("n", "<c-b>", "<CMD>!python3 %:p<CR>")
+
