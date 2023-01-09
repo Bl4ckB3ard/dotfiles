@@ -10,6 +10,10 @@ return require("packer").startup(function(use)
 
   use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
 
+  use({"terrortylor/nvim-comment", config = function()
+      require('nvim_comment').setup()
+  end})
+
   use({
       "VonHeikemen/lsp-zero.nvim",
       requires = {
