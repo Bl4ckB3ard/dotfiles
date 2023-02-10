@@ -119,7 +119,7 @@ export PATH=$PATH:/opt/node/bin/
 export PATH=$PATH:/home/colton/.go/golib/bin
 
 #Default Editor
-export EDITOR=vim
+export EDITOR=nvim
 
 # GOLANG VARIABLES
 
@@ -138,3 +138,4 @@ alias srn="sudo shutdown -r now"
 alias rm="rm -r"
 alias cp="cp -i"
 alias nv='nvim'
+. "$HOME/.cargo/env"

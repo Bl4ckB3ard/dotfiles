@@ -49,5 +49,5 @@ vim.keymap.set("n", "<c-d>", "<c-d>zz")
 vim.keymap.set("n", "<c-u>", "<c-u>zz")
 
 -- run python file
-vim.keymap.set("n", "<c-b>", "<CMD>!python3 %:p<CR>")
+vim.keymap.set("n", "<c-b>", "<CMD>!cargo run<CR>")
 
