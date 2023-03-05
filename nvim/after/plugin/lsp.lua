@@ -2,11 +2,7 @@ local lsp = require("lsp-zero")
 
 lsp.preset('recommended')
 
-lsp.ensure_installed({
-	'pyright',
-	'gopls',
-	'clangd'
-})
+-- lsp.ensure_installed({})
 
 local cmp = require("cmp")
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
