@@ -36,8 +36,6 @@ return require("packer").startup(function(use)
       }
   })
 
-  use("scrooloose/nerdtree")
-
   use({"nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true }})
 
   use({"windwp/nvim-autopairs", config = function()
