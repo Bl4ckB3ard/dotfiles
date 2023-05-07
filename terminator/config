@@ -1,6 +1,8 @@
 [global_config]
   dbus = False
   enabled_plugins = CustomCommandsMenu, LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
+  title_use_system_font = False
+  title_font = ProFontIIx Nerd Font 9
 [keybindings]
   new_tab = <Super>n
   cycle_next = None
