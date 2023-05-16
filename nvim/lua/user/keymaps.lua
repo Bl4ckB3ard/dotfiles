@@ -1,6 +1,4 @@
-
-vim.keymap.set("n", "<leader>\\", "<CMD>NERDTreeToggle<CR>") 
-
+-- window movements
 vim.keymap.set("n", "<c-l>", "<c-w>l")
 vim.keymap.set("n", "<c-h>", "<c-w>h")
 vim.keymap.set("n", "<c-j>", "<c-w>j")
@@ -27,12 +25,16 @@ vim.keymap.set("i", "<c-a>", "<esc>ggVG")
 
 vim.keymap.set("n", "<leader>term", "<CMD>split <bar> res 8 <bar> term<CR>i")
 
+-- window resize
 vim.keymap.set("n", "<A-h>", "<CMD>vertical resize -1<CR>")
 vim.keymap.set("n", "<A-l>", "<CMD>vertical resize +1<CR>")
 vim.keymap.set("n", "<A-j>", "<CMD>resize +1<CR>")
 vim.keymap.set("n", "<A-k>", "<CMD>resize -1<CR>")
 
+-- tab movements
+vim.keymap.set("n", "<leader><TAB>", "<CMD>tabnext<CR>")
 
+-- change colorscheme
 vim.keymap.set("n", "<leader>cs1", "<CMD>lua ColorMyPencils(1)<CR>")
 vim.keymap.set("n", "<leader>cs2", "<CMD>lua ColorMyPencils(2)<CR>")
 vim.keymap.set("n", "<leader>cs3", "<CMD>lua ColorMyPencils(3)<CR>")
@@ -44,10 +46,9 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 vim.keymap.set({"n", "v"}, "<leader>p", "\"+p")
 
+-- dd to a void registger
+vim.keymap.set("n", "<leader>dd", "\"_dd")
+
 -- fix <c-d> and <c-u>
 vim.keymap.set("n", "<c-d>", "<c-d>zz")
 vim.keymap.set("n", "<c-u>", "<c-u>zz")
-
--- run python file
-vim.keymap.set("n", "<c-b>", "<CMD>!cargo run<CR>")
-
