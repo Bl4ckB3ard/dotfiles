@@ -1,5 +1,7 @@
 [global_config]
   dbus = False
+  window_state = maximise
+  inactive_color_offset = 0.7515527950310559
   enabled_plugins = CustomCommandsMenu, LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
   title_use_system_font = False
   title_font = ProFontIIx Nerd Font 9
@@ -50,8 +52,11 @@
     allow_bold = False
     background_darkness = 0.49
     cursor_color = "#aaaaaa"
+    font = JetBrainsMono Nerd Font Medium 17
     foreground_color = "#ffffff"
+    scrollback_infinite = True
     palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+    use_system_font = False
     copy_on_selection = True
   [[red]]
     background_color = "#ef2929"

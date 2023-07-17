@@ -66,11 +66,12 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1" # "
     ;;
 *)
     ;;
 esac
+
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -83,6 +84,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
@@ -98,7 +100,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
+# ~/.bash_aliases, instead of adding them here directly. 
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
@@ -115,27 +117,30 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Node js PATH
 export PATH=$PATH:/opt/node/bin/
-export PATH=$PATH:/home/colton/.go/golib/bin
 
 #Default Editor
 export EDITOR=nvim
 
 # GOLANG VARIABLES
-
 export PATH=$PATH:/usr/local/go/bin
-export GOPATH=/home/colton/.go/code/
 
 # ALIASES
-
-# System commands
 
 alias ..="cd .."
 alias ...="cd ../.."
 alias 3..="cd ../../.."
+
 alias ssn="sudo shutdown -P now"
 alias srn="sudo shutdown -r now"
+
 alias rm="rm -r"
-alias cp="cp -i"
+alias cp="cp -ri"
+
 alias nv='nvim'
-. "$HOME/.cargo/env"
+
+alias myfind='~/.scripts/myfind.sh'
+alias clip='xclip -selection clipboard'
+alias vlc='vlc . &>/dev/null &'
