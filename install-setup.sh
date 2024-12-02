@@ -1,4 +1,4 @@
-j
+#!/bin/bash
 
 install_deps() {
   sudo apt update; sudo apt upgrade -y
@@ -25,7 +25,6 @@ install_neovim () {
   rm -rf ~/.config/nvim/.git/
 
   echo "Run ':MasonInstallAll' when setup complted"
-  
 }
 
 
@@ -49,23 +48,23 @@ install_custom_configs () {
   git clone https://github.com/bl4ckb3ard/dotfiles.git /tmp/dotfiles
 
   cp -r /tmp/dotfiles/terminator/ ~/.config/terminator
-  # cp /tmp/dotfiles/.bash_aliases ~/.bash_aliases
+  cp /tmp/dotfiles/.bash_aliases ~/.bash_aliases
   cat << EOF >> /tmp/test
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 EOF
-
+  
 }
 
 
-main () {
-  install_deps
-  install_neovim
-  install_node
-  install_custom_configs
-
-}
+# main () {
+#   install_deps
+#   install_neovim
+#   install_node
+#   install_custom_configs
+#
+# }
 
 
 main () {
