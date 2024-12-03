@@ -2,7 +2,7 @@
 
 install_deps() {
   sudo apt update; sudo apt upgrade -y
-  sudo apt install git terminator python3-venv
+  sudo apt install git terminator python3-venv wget
   pip3 install venv
   
   clear
@@ -47,7 +47,7 @@ install_node () {
 install_custom_configs () {
   git clone https://github.com/bl4ckb3ard/dotfiles.git /tmp/dotfiles
 
-  cp -r /tmp/dotfiles/terminator/ ~/.config/terminator
+  cp -rf /tmp/dotfiles/terminator/ ~/.config/terminator
   cp /tmp/dotfiles/.bash_aliases ~/.bash_aliases
   cat << EOF >> /tmp/test
 if [ -f ~/.bash_aliases ]; then
@@ -55,24 +55,16 @@ if [ -f ~/.bash_aliases ]; then
 fi
 EOF
   
+  cp -rf /tmp/dotfiles/new-nvim ~/.config/nvim
+
 }
 
 
-# main () {
-#   install_deps
-#   install_neovim
-#   install_node
-#   install_custom_configs
-#
-# }
-
-
 main () {
-  # install_deps
-  # install_neovim
-  # install_node
+  install_deps
+  install_neovim
+  install_node
   install_custom_configs
-
 }
 
 main
